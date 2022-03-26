@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizOptionActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewQuizOption"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/quiz_option"
+                style="@style/titleTextStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewQuizOption"
+                app:layout_constraintStart_toEndOf="@+id/imageViewQuizOption"
+                app:layout_constraintTop_toTopOf="@+id/imageViewQuizOption" />
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvNumbers"
+                style="@style/cardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_card_height"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/cvIntro"
+                app:layout_constraintStart_toStartOf="@+id/cvIntro"
+                app:layout_constraintTop_toBottomOf="@+id/cvIntro">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="@dimen/start_quiz_image_view_size"
+                        android:layout_height="@dimen/start_quiz_image_view_size"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/numbers" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/numbers"
+                        style="@style/categoryHeadingTextStyle"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintStart_toEndOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFoods"
+                style="@style/cardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_card_height"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/cvNumbers"
+                app:layout_constraintStart_toStartOf="@+id/cvNumbers"
+                app:layout_constraintTop_toBottomOf="@+id/cvNumbers">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="@dimen/start_quiz_image_view_size"
+                        android:layout_height="@dimen/start_quiz_image_view_size"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/spaghetti" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/categoryHeadingTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/foods"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--<androidx.cardview.widget.CardView
+                android:id="@+id/cvFlags"
+                style="@style/cardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_card_height"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/cvFoods"
+                app:layout_constraintStart_toStartOf="@+id/cvFoods"
+                app:layout_constraintTop_toBottomOf="@+id/cvFoods"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageFlag"
+                        android:layout_width="@dimen/start_quiz_image_view_size"
+                        android:layout_height="@dimen/start_quiz_image_view_size"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/animals" />
+
+                    <RatingBar
+                        android:id="@+id/levelScoreFlag"
+                        style="@style/RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="0.5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textFlag"
+                        app:layout_constraintTop_toBottomOf="@+id/textFlag" />
+
+                    <TextView
+                        android:id="@+id/textFlag"
+                        style="@style/categoryHeadingTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="48dp"
+                        android:text="@string/Flags"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageFlag"
+                        app:layout_constraintStart_toEndOf="@+id/imageFlag"
+                        app:layout_constraintTop_toTopOf="@+id/imageFlag" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvIntro"
+                style="@style/cardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_card_height"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageIntro"
+                        android:layout_width="@dimen/start_quiz_image_view_size"
+                        android:layout_height="@dimen/start_quiz_image_view_size"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/worldwide" />
+
+                    <TextView
+                        android:id="@+id/textIntro"
+                        style="@style/categoryHeadingTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="48dp"
+                        android:text="@string/Intro"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageIntro"
+                        app:layout_constraintStart_toEndOf="@+id/imageIntro"
+                        app:layout_constraintTop_toTopOf="@+id/imageIntro" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAnimals"
+                style="@style/cardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_card_height"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="@id/cvFoods"
+                app:layout_constraintStart_toStartOf="@id/cvFoods"
+                app:layout_constraintTop_toBottomOf="@+id/cvFoods"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageAnimals"
+                        android:layout_width="@dimen/start_quiz_image_view_size"
+                        android:layout_height="@dimen/start_quiz_image_view_size"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/animals" />
+
+                    <TextView
+                        android:id="@+id/textAnimals"
+                        style="@style/categoryHeadingTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="48dp"
+                        android:text="@string/animals"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageAnimals"
+                        app:layout_constraintStart_toEndOf="@+id/imageAnimals"
+                        app:layout_constraintTop_toTopOf="@+id/imageAnimals" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
